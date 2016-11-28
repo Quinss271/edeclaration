@@ -13,7 +13,7 @@ print("Content-type: text/html\n")
 print("""<!DOCTYPE HTML>
         <html>
         <head>
-            <meta charset="utf-8">
+            
             <title>Обработка данных форм</title>
         </head>
         <body>""")
@@ -22,10 +22,15 @@ num_ell = (parsed_json.get("page")["totalItems"])
 ids = 0
 idss = []
 while ids < num_ell:
-	idss[] = (parsed_json.get("items")[ids]["id"])
+	
+	idss = (parsed_json.get("items")[ids]["id"])
+	names = (parsed_json.get("items")[ids]["firstname"])
+	familys = (parsed_json.get("items")[ids]["lastname"])
+	
+	print ("<a href=https://public-api.nazk.gov.ua/v1/declaration/"+ idss +">"+names+" "+familys+"</a>"+"<input type=button <a href=https://public-api.nazk.gov.ua/v1/declaration/"+ idss +"></a><br>")
 	ids=ids+1
-	print ("<a href https://public-api.nazk.gov.ua/v1/declaration/"+idss[])+"></a>"
-
+	
+print("<form action=/more.py><input type=text name=TEXT_1><input type=submit></form>")
 print("""</body>	
         </html>""")
 

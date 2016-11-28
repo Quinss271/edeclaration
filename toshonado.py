@@ -17,9 +17,7 @@ print("""<!DOCTYPE HTML>
             <title>Обработка данных форм</title>
         </head>
         <body>""")
-print (parsed_json.get('data')['step_6']['1476771644974']['brand'])
-print (parsed_json.get('data')['step_12']['1477547243608']['sizeAssets'])
-print (parsed_json.get('data')['step_12']['1477547243608']['assetsCurrency'])
+print (parsed_json.get("data")['step_3']['1477321890754']['objectType'])
 
 print("""</body>
         </html>""")
