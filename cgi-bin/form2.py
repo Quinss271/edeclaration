@@ -29,11 +29,12 @@ print("""
 	<tbody>	""")
 ch = -1
 hz_kak_nazvat = {}
-while ch < 30 :
-	print (parsed_json.get("data")["step_3"])
-	print (parsed_json.get("data")["step_3"][id_subject])
-	print("""<tr><th> Місце роботи</th>
-	<th>"""+hz_kak_nazvat+"""</th>""")
+while ch < 0 :
+	idds=  (parsed_json.get("data")["step_3"])
+	for key in idds:
+		objectTypest3 = (parsed_json.get("data")["step_3"][key]["objectType"])
+		print("""<tr><th> Тип об'єкту</th>
+		<th>"""+objectTypest3+"""</th>""")
 	ch=ch+1
 print("""</tr>
 </tbody>
